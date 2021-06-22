@@ -28,6 +28,20 @@ import ProductInformation from "./component-2/ProductInformation";
 import ErrorBoundary from "./component-2/ErrorBoundary";
 import ClickCounter from "./component-2/ClickCounter";
 import HoverComponent from "./component-2/HoverComponent";
+import ModelCount1 from "./component/ModelCount1";
+import Model2 from "./component/Model2";
+import ModelCount from "./component/ModelCount";
+import ClickCounter2 from "./component2/ClickCounter2";
+import ClickCounter3 from "./component2/ClickCounter3";
+import RenderProps from "./component2/RenderProps";
+import ComponentA from "./component2/ComponentA";
+import { UserProvider } from "./component2/userContext";
+import ReactGetCall from "./component3/ReactGetCall";
+import PostCall from "./component3/PostCall";
+import SimpleCounter from "./hookscomponents/SimpleCounter";
+import HooksCounter from "./HooksComponent/HooksCounter";
+import FormHooks from "./HooksComponent/FormHooks";
+import HooksRandom from "./HooksComponent/HooksRandom";
 
 function App() {
   return (
@@ -76,8 +90,38 @@ function App() {
         <ProductInformation productName="Furniture" />
       </ErrorBoundary> */}
 
-      <ClickCounter productname="Table"/>
-      <HoverComponent />
+      {/* <ClickCounter productname="Table"/>
+      <HoverComponent /> */}
+      {/* <Model1 />
+      <Model2 /> */}
+
+      {/* <ClickCounter2 />
+      <ClickCounter3 /> */}
+      {/* 
+      <RenderProps
+        name="Hello"
+        render={(count,increment)=>(<ClickCounter2 countFromRenderProp={count} incrementMethodCall={increment}/>)}
+      />
+
+      <RenderProps
+        render={(count, increment) => (
+          <ClickCounter3
+            countFromRenderProp={count}
+            incrementMethodCall={increment}
+          />
+        )}
+      /> */}
+      {/* 
+      <UserProvider value="React Session">
+        <ComponentA loginuname="React" />
+      </UserProvider> 
+      <ReactGetCall />
+      <PostCall />*/}
+      {/* <SimpleCounter/> */}
+      <HooksRandom />
+      <HooksCounter />
+      <FormHooks />
+     
     </div>
   );
 }
