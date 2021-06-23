@@ -8,6 +8,7 @@ function HooksCounter() {
       setCount((count) => count + 1);
     }
   };
+  
   return (
     <div>
       <h1>Count - {count}</h1>
