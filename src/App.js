@@ -42,8 +42,51 @@ import SimpleCounter from "./hookscomponents/SimpleCounter";
 import HooksCounter from "./HooksComponent/HooksCounter";
 import FormHooks from "./HooksComponent/FormHooks";
 import HooksRandom from "./HooksComponent/HooksRandom";
+import ClassCounter1 from "./HooksComponent/ClassCounter1";
+import EffectHook from "./HooksComponent/EffectHook";
+import MounseEvent from "./HooksComponent/MounseEvent";
+import EffectMouse from "./HooksComponent/EffectMouse";
+import MouseContainer from "./HooksComponent/MouseContainer";
+import DataFetching from "./HooksComponent/DataFetching";
+import ComponentD from "./HooksComponent/ComponentD";
+import React,{useReducer} from "react";
+import Counter1 from "./reducerhook/Counter1";
+import Counter2 from "./reducerhook/Counter2";
+import Counter3 from "./reducerhook/Counter3";
+import Counter4 from "./reducerhook/Counter3";
+import ComponentB from "./component2/ComponentB";
+import ComponentC from "./component2/ComponentC";
+import ComponentZ from "./reducerhook/ComponentZ";
+import ComponentY from "./reducerhook/ComponentY";
+import ComponentX from "./reducerhook/ComponentX";
+
+export const UserContext = React.createContext();
+export const productDetail = React.createContext();
+export const CounterContext = React.createContext();
+
+
+
+const initialState =0;
+
+//state -> initialState
+//action -> dipatch method parameter
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+}
 
 function App() {
+
+  const [count,dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="App">
       <h1>Welcome to react</h1>
@@ -118,10 +161,29 @@ function App() {
       <ReactGetCall />
       <PostCall />*/}
       {/* <SimpleCounter/> */}
-      <HooksRandom />
-      <HooksCounter />
-      <FormHooks />
-     
+      {/* <HooksRandom /> */}
+      {/* <HooksCounter /> */}
+      {/* <FormHooks /> */}
+      {/* <ClassCounter1/> */}
+      {/* <EffectHook /> */}
+      {/* <MounseEvent /> */}
+      {/* <EffectMouse /> */}
+      {/* <MouseContainer /> */}
+      {/* <DataFetching /> */}
+      {/* <UserContext.Provider value={"Hello React"}>
+        <productDetail.Provider value="washer">
+          <ComponentD />
+        </productDetail.Provider>
+      </UserContext.Provider> */}
+      {/* <Counter1/> */}
+      {/* <Counter2/> */}
+      {/* <Counter3/> */}
+      {/* <Counter4/> */}
+      <CounterContext.Provider value={{countState:count, countDispatch: dispatch}}> 
+          <ComponentX />
+          <ComponentY />
+          <ComponentZ />
+      </CounterContext.Provider>
     </div>
   );
 }
