@@ -59,6 +59,12 @@ import ComponentC from "./component2/ComponentC";
 import ComponentZ from "./reducerhook/ComponentZ";
 import ComponentY from "./reducerhook/ComponentY";
 import ComponentX from "./reducerhook/ComponentX";
+import DataFetchingOne from "./reducerhook/DataFetchingOne";
+import DataFetchingTwo from "./reducerhook/DataFetchingTwo";
+import CallBackComponent from "./useCallbackDemo/ParentComponent"
+import RefFocusInput from "./useCallbackDemo/RefFocusInput";
+import ClassTimer from "./useCallbackDemo/ClassTimer";
+import HookFunTimer from "./useCallbackDemo/HookFunTimer";
 
 export const UserContext = React.createContext();
 export const productDetail = React.createContext();
@@ -179,11 +185,17 @@ function App() {
       {/* <Counter2/> */}
       {/* <Counter3/> */}
       {/* <Counter4/> */}
-      <CounterContext.Provider value={{countState:count, countDispatch: dispatch}}> 
+      {/* <CounterContext.Provider value={{countState:count, countDispatch: dispatch,message:'Hello'}}> 
           <ComponentX />
           <ComponentY />
           <ComponentZ />
-      </CounterContext.Provider>
+      </CounterContext.Provider> */}
+      {/* <DataFetchingOne/> */}
+      {/* <DataFetchingTwo/> */}
+      {/* <CallBackComponent /> */}
+      {/* <RefFocusInput/> */}
+      {/* <ClassTimer/> */}
+      <HookFunTimer/>
     </div>
   );
 }

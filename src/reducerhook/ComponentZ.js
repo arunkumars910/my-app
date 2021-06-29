@@ -6,7 +6,7 @@ function ComponentZ() {
 
   return (
     <div>
-      <h1>This is component Z</h1>
+      <h1>This is component Z {countContext.message}</h1>
       <h1>Count : {countContext.countState}</h1>
       <button onClick={()=>countContext.countDispatch('increment')}>increment</button>
       <button onClick={()=>countContext.countDispatch('decrement')}>decrement</button>
