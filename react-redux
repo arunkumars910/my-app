@@ -1,0 +1,69 @@
+Introduction to React Redux
+
+Redux is predictable state container for the Java script app
+
+Its a Java script app
+
+- Redux is java script library
+- Redux is not tied with react. We can use Redux with React,Angular,Vue or even with venilla java script
+
+Its a state container 
+
+- Redux stores state of you application
+
+Consider a React app - state of the component
+
+State of the app is state represented by all the individual component of the app
+
+state={
+	isUserLoggedIn:true,
+	Username: 'React',
+	users:[],
+	isLoaderEnabled:false
+}
+
+state={
+	userName:'',
+	password:'',
+	submitting:false,
+}
+
+Its predictable
+
+In redux, all the state transitions are explicit. So its possible to keep track of them
+
+Any change in state its easily predictable
+
+If we want manage the state of the application in predictable way redux will help us
+
+----------------------------------------------------------------------------------------------------
+
+Why do we need another tool to help manage the state
+
+React-Redux
+
+Three Principle
+
+First principle
+
+The state of your whole application is stored in the object tree within a single store
+
+Maintain our application in a single object which could be managed by the redux store
+
+
+Second principle
+
+State is read read only, The only way to change the state is to emit(dispatch) action, an object describing what happened
+
+To update the state of our app, you need to let redux know about that with an action happened
+
+Not allowed to directly change the state object(Not allowed customer to directly take a cake from the shop)
+
+
+Third Principle
+
+To specify how the state is transformed by Actions, you have to write pure reducers(pure function)
+
+Reducer =>(prevState,action) =>newState
+
+Dispatch or Emit the actions -> Once action dispatched reducer handles the actions -> Store JS APP(It should subscribe to the redux store)
