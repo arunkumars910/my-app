@@ -9,7 +9,7 @@ class ClickCounter extends Component {
         <h1>
           {this.props.count} {this.props.name} {this.props.productname}
         </h1>
-        <button onClick={this.props.increment}>Click Here</button>
+        <button onClick={this.props.increment}>Click Here..</button>
       </div>
     );
   }
